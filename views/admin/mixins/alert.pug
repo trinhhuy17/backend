@@ -1,0 +1,19 @@
+mixin alert-success()
+    - if (messages.succes)
+        div(
+            class="alert alert-success"
+            show-alert
+            data-time="5000"
+            )
+            | #{messages.succes}
+            button(class ="btn btn-danger btn-sm" close-alert) x
+
+mixin alert-error()
+    - if (messages.error)
+        div(
+            class="alert alert-danger"
+            show-alert
+            data-time="5000"
+            )
+            | #{messages.error}
+            button(class ="btn btn-danger btn-sm" close-alert) x            
